@@ -1,13 +1,40 @@
 % IVAN KHARITONOV RESUME Nov 2019
 % DOCUMENT SETUP
-\documentclass[10pt, a4paper]{article}
+\usepackage{extarticle}
+\documentclass[10pt, a4paper]{extarticle}
+\makeatletter
+% FONT SIZE
+\renewcommand\normalsize{\@setfontsize\normalsize{9}{12}}
+\makeatother
+% LINE SPREAD
+\linespread{1.15}
 \usepackage{array, xcolor, lipsum, bibentry}
+% PAGE MARGINS
 \usepackage[left=2cm, right=2cm,t op=2cm, bottom=2cm]{geometry}
+% 
 \usepackage{multicol}
 \usepackage{titling}
-\usepackage{enumitem}
-\pagenumbering{gobble} % DISABLE PAGE NUMBERING
+ % DISABLE PAGE NUMBERING
+\pagenumbering{gobble}
+%  DISABLE LINE BREAKING
+\hyphenpenalty = 10000 
+\exhyphenpenalty = 10000
+% NEW COMMANDS
+\definecolor{mygray}{gray}{0.35}
+\newcommand\boldgrey[1]{\textcolor{mygray}{\textbf{#1}}} 
 \newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+% NEW BULLET POINTS
+\renewcommand{\labelitemi}{$\circ$} 
+\renewcommand\labelitemii{$\square$}
+% HYPERLINKS SETUP
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true, 
+urlcolor=blue,  
+urlbordercolor=cyan}
+% DEFINE SPACE AROUND SECTION
+\usepackage{titlesec}
+\titlespacing*{\section} {0pt}{0ex}{0ex} 
 %
 % 
 %--------------------HEADER (NAME, CONTACTS - EMPTY)----------------------
@@ -20,8 +47,8 @@
 % 
 % 
 %--------------------TABLE SETUP----------------------
-\definecolor{lightgray}{gray}{0.4}
-\newcolumntype{L}{>{\raggedleft}p{0.18\textwidth}} % LEFT TABLE MARGIN
+\definecolor{lightgray}{gray}{0.65}
+\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}} % LEFT TABLE MARGIN
 \newcolumntype{R}{p{0.8\textwidth}} % RIGHT TABLE MARGIN
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
 %  
@@ -29,105 +56,95 @@
 %--------------------CONTACTS----------------------
 \begin{document}
 \maketitle
-\vspace{-7em}
-\begin{minipage}[ht]{0.35\textwidth} Moscow \end{minipage}
-\begin{minipage}[ht]{0.35\textwidth} ipkharitonov@gmail.com \end{minipage}
-\begin{minipage}[ht]{0.35\textwidth} +7(916)785-71-11 \end{minipage}
-% \begin{minipage}[ht]{0.28\textwidth}    age 27 \end{minipage}
+\vspace{-7.5em}
+\noindent\makebox[\textwidth][c]{%
+    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering Moscow \end{minipage}
+    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering ipkharitonov@gmail.com \end{minipage}
+    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering +7(916)785-71-11 \end{minipage}
+}\\
+% 
+%
+%--------------------STATEMENT----------------------
+I am interested in automotive and robotics areas and looking for a challenging software developer position in the self-driving industry and expand my knowledge and skills in control problems.
 % 
 %
 %--------------------EDUCATION----------------------
 \section*{Education}
-\vspace{-0.5em}
 \begin{tabular}{@{}L!{\VRule}R}
-2008--2014& \textbf{MS} degree at \textbf{Bauman Moscow State Technical University}, Electrical engineering \\ 
+2008 -- 2014& \textbf{MS + BS} (electrical engineering) at \textbf{Bauman Moscow State Technical University}  \\ 
 % (Radioelectronic Systems and Devices - Radars) \\
 2016&Data Mining in Action course (open ML course at MIPT)\\
-2017--2019&Additional education at \textbf{Yandex School of Data Analysis} - Computer Science sector\\
+2017 -- 2019&Additional education at \textbf{Yandex School of Data Analysis} -- Computer Science program\\
 \end{tabular}
 % 
 % 
 %--------------------EXPERIENCE----------------------
 \section*{Professional Experience}
-\vspace{-0.5em}
 \begin{tabular}{@{}L!{\VRule}R}
 % 
 % YSDA
-Feb 2019-Jun 2019 \\ {\bf YSDA}&
-{\textit{Teaching assistant for the course Practical RL}}\\
+Feb 2019 -- Jun 2019 \\ {\boldgrey{Yandex DA school}} \\ &
+{\textsc{Teaching assistant for the course Practical RL}} Provided help and read seminars with hw checkups in HSE and YSDA \\
 % 
 % FSUE NAMI
-Jul 2015-Nov 2017 \\ {\bf FSUE NAMI}
-&{\textit{Research engineer at Information and Intelligent Systems Centre - self-driving department}}\\ &\
-\vspace{-2em}
+Jul 2015 -- Nov 2017 \\ {\bf FSUE NAMI} \\ \boldgrey{Central Scientific Research Automotive Institute -- \\ Information and Intelligent Systems Center} &
+{\textsc{Research engineer at self-driving department (\href{https://www.engadget.com/2016/08/28/yandex-teams-on-self-driving-shuttle-bus/}{Shuttle project})}
+% 
 \begin{itemize}
-    \item[--] Implemented perception models for object detection task - getting training data, searching model design, model implementation (Caffe) and evaluation.
+    \item Implemented perception models for object detection task -- collecting/generating training data, optimizing the model design, model implementation (Caffe DL framework) and evaluation.
 \end{itemize}
-&\\
-&{\vspace{-2em} 
-\textit{Software developer (Control systems) at Information and Intelligent Systems Centre - transmission control system department (Aurus project)}}\\ &\
-\vspace{-1em}
+\textsc{Software developer (Control systems) at transmission control systems department (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})}
 \begin{itemize}
-\setlength\itemsep{0em}
-    \item[--] System identification - created plant models for some vehicle mechanism, such that gearbox clutch hydraulic actuator. 
-    \item[--] Implemented basic software layer software for automotive uC (C, Simulink, Altium Designer) from scratch.
-    \item[--] Designed and implemented a controller for hydraulic actuators with further improving quality metrics and decreasing system setting time.
-    \item[--] Decreased calibration time by developing automated calibration procedure of control system parameters and tested control algorithms on the testbench.
-\end{itemize}
+    \item System identification -- created plant models for some vehicle mechanism, such that gearbox clutch hydraulic actuator. 
+    \item Implemented basic software layer for automotive microcontroller (C, Simulink, Altium Designer) from scratch.
+    \item Designed and implemented a controller for hydraulic actuators with further improving quality metrics and decreasing system setting time.
+    \item Decreased calibration time by developing automated calibration procedure of control system parameters and tested control algorithms on the testbench.
+\end{itemize} \\
 % 
 % FORMULA STUDENT
-\\
-\vspace{-1em}
-Mar 2013--Aug 2015 \\ {\bf BMSTU}&
-{\textit{Hardware and telemetry engineer on an FSAE team.}}
-Participated in international engineering competition FSAE as a member of the racing team of the university.\\ &\
+Mar 2013 -- Aug 2015 \\ {\bf BMSTU \\ \boldgrey{Bauman Moscow State Technical University}} &
+{\textsc{Hardware and telemetry engineer on \href{https://baumanracing.ru/en/}{an FSAE team}.}}
+Participated in international engineering competition FSAE as a member of the university racing team.
 % 
 Responsibilities: hardware and software development, sponsorship and partnership management.
-\\ &\
 % 
 Achievements:
 \begin{itemize}
-\item[--] Released projects: MS thesis - using RTK navigation for telemetry, f1 like steering wheel with integrated LCD and buttons, wireless telemetry module, signals expansion module by reverse-engineering race ECU CANbus protocol.
-\item[--] Received positive feedback from judges on the competition.
-\item[--] Established sponsorship contracts with several companies.
-\end{itemize}
-\\
+\item Released projects: MS thesis -- using RTK navigation for telemetry, F1-like steering wheel with integrated LCD, wireless telemetry module, signals expansion module by reverse-engineering the race ECU CANbus protocol.
+\item Received positive feedback from judges on the design event with good score.
+\item Established sponsorship contracts with several companies. As a result, we were granted new equipment.
+\end{itemize} \\
 % 
 % CRYPTO LLC
-Feb 2012--Jul 2013 \\ {\bf Crypto LLC} &
-{\textit{Engineer at System Integration Department.}} Testing of the conditional access system with standard DVB SimulCrypt
-% 
+Feb 2012 -- Jul 2013 \\ {\bf Crypto LLC \\ \boldgrey{Systems integrator}} &
+{\textsc{Engineer at System Integration Department.}}
 \begin{itemize}
-    \item[--] Adapted the product to the customer by adding fault tolerance setup.
-    \item[--] Integrated monitoring tool (Zabbix) with data management system.
+    \item Adapted the product to the customer by adding fault tolerance setup.
+    \item Integrated the monitoring tool (Zabbix) with a data management system.
 \end{itemize} \\
 % 
 % Dominanta Vimpelcom
-May 2009--Feb 2012 {\bf Vimpelcom}&
-{\textit{Test Engineer}} The company provided TV broadcasting for mobile phones (DVB-H).
+May 2009 -- Feb 2012 {\bf PJSC VimpelCom}&
+{\textsc{Test Engineer.}} The Vimpelcom`s \href{https://www.dvb.org/news/russia-to-launch-dvb-h-services}{pilot project} - TV provider for mobile phones.
 \begin{itemize}
-    \item[--] Worked with the DVB technology and infrastructure.
-    \item[--] Monitoring of the head and base stations and 2nd level technical support.
+    \item Monitoring of the head and base stations (DVB-H) and 2nd level technical support.
 \end{itemize}
 \end{tabular}
 % 
 % 
 %--------------------SKILLS----------------------
 \section*{Skills}
-\vspace{-0.5em}
 \begin{tabular}{@{}L!{\VRule}R}
 Programming& C, C++, Python, Simulink, MATLAB.\\
 Other software& Vector software, Altium Designer, Solidworks, LabView\\
-Languages&Russian - Native, English--B2\\
+Languages&Russian -- Native, English -- B2\\
 \end{tabular}
 % 
 % 
 %--------------------OTHER----------------------
 \section*{Other}
-\vspace{-0.5em}
 \begin{tabular}{@{}L!{\VRule}R}
-Activities& Lectures for consulting BMSTU formula student team (driverless part)\\
-Participated&CupTechnical 2015, BusinessDiving 2015, DeepHack RL 2017 , Kaspersky DS 2017\\
+Recent Activities& organized reading club about robotics and self-driving at the BMSTU formula student group\\
 Other interests& road bicycle racing, motorsport
 \end{tabular}
 % 
