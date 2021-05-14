@@ -6,7 +6,7 @@
 \renewcommand\normalsize{\@setfontsize\normalsize{9}{12}}
 \makeatother
 % LINE SPREAD
-\linespread{1.15}
+\linespread{1.1}
 \usepackage{array, xcolor, lipsum, bibentry}
 % PAGE MARGINS
 \usepackage[left=2cm, right=2cm,t op=2cm, bottom=2cm]{geometry}
@@ -34,6 +34,11 @@ urlbordercolor=cyan}
 % DEFINE SPACE AROUND SECTION
 \usepackage{titlesec}
 \titlespacing*{\section} {0pt}{0ex}{0ex} 
+% PHOTO
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{{./images/}}
+\usepackage[leftcaption]{sidecap}
 %
 % 
 %--------------------HEADER (NAME, CONTACTS - EMPTY)----------------------
@@ -56,12 +61,30 @@ urlbordercolor=cyan}
 \begin{document}
 \maketitle
 \vspace{-7.5em}
-\noindent\makebox[\textwidth][c]{%
-    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering Moscow \end{minipage}
-    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering ipkharitonov@gmail.com \end{minipage}
-    \noindent\begin{minipage}[ht]{0.25\textwidth} \centering +7(916)785-71-11 \end{minipage}
-}\\
 % 
+\begin{SCfigure}[1.5][h]
+    \includegraphics[width=0.2\textwidth]{portrait.jpeg}
+    \captionsetup{labelformat=empty}
+    \caption{Moscow \\ 
+    1 Nov 1991 \\ 
+    ipkharitonov@gmail.com \\
+    +7(916)785-71-11 }
+\end{SCfigure}
+% \noindent\makebox[\textwidth][c]{%
+%     \noindent\begin{minipage}[ht]{0.25\textwidth} \centering Moscow \end{minipage}
+%     \noindent\begin{minipage}[ht]{0.25\textwidth} \centering ipkharitonov@gmail.com \end{minipage}
+%     \noindent\begin{minipage}[ht]{0.25\textwidth} \centering +7(916)785-71-11 \end{minipage}
+% }\\
+% 
+%
+%--------------------PHOTO----------------------
+% \begin{wrapfigure}{r}{0.05\textwidth}
+%     \centering
+%     % \includegraphics{portrait}
+%     \includegraphics[width=0.05\textwidth]{portrait}
+% \end{wrapfigure}
+
+% %
 %
 %--------------------STATEMENT----------------------
 I am interested in automotive and robotics areas and looking for a challenging software developer position in the self-driving industry and expand my knowledge and skills in control problems.
@@ -74,16 +97,25 @@ I am interested in automotive and robotics areas and looking for a challenging s
     % (Radioelectronic Systems and Devices - Radars) \\
     2016         & Data Mining in Action course (open ML course at MIPT)                                          \\
     2017 -- 2019 & Additional education at \textbf{Yandex School of Data Analysis} -- Computer Science program    \\
+    2019 & Summer school "Control, Information, Optimization"
 \end{tabular}
 % 
 % 
 %--------------------EXPERIENCE----------------------
 \section*{Professional Experience}
 \begin{tabular}{@{}L!{\VRule}R}
-    % 
-    % YSDA
-    Feb 2019 -- Jun 2019                                                                                                       \\ {\boldgrey{Yandex DA school}} \\ &
-    {\textsc{Teaching assistant for the course Practical RL}} Provided help and read seminars with hw checkups in HSE and YSDA \\
+    % Sberautotech
+    Aug 2020 -- now                                                                                                       \\ {\bf Sberbank} \\ \boldgrey{Sberautotech \\} &
+    {\textsc{Software engineer - perception team}}
+
+    \begin{itemize}
+        \item Implemented models for point-cloud based object detection task.
+    \end{itemize}
+    
+    \textsc{Software engineer - prediction team}
+    \begin{itemize}
+        \item Multi-object tracking -- solve object tracking problem using random finite set statistics.
+    \end{itemize}                                                                                                  \\
     % 
     % FSUE NAMI
     Jul 2015 -- Nov 2017                                                                                                       \\ {\bf FSUE NAMI} \\ \boldgrey{Central Scientific Research Automotive Institute -- \\ Information and Intelligent Systems Center} &
@@ -112,7 +144,7 @@ I am interested in automotive and robotics areas and looking for a challenging s
         \item Released projects: MS thesis -- using RTK navigation for telemetry, F1-like steering wheel with integrated LCD, wireless telemetry module, signals expansion module by reverse-engineering the race ECU CANbus protocol.
         \item Received positive feedback from judges on the design event with good score.
         \item Established sponsorship contracts with several companies. As a result, we were granted new equipment.
-    \end{itemize}                                                                                                  \\
+    \end{itemize}                                                                                              \\
     % 
     % CRYPTO LLC
     Feb 2012 -- Jul 2013                                                                                                       \\ {\bf Crypto LLC \\ \boldgrey{Systems integrator}} &
@@ -131,20 +163,31 @@ I am interested in automotive and robotics areas and looking for a challenging s
 \end{tabular}
 % 
 % 
-%--------------------SKILLS----------------------
-\section*{Skills}
+\section*{Teaching}
 \begin{tabular}{@{}L!{\VRule}R}
-    Programming    & Python, Simulink, MATLAB, C, C++                     \\
-    Other software & Vector software, Altium Designer, Solidworks, LabView \\
-    Languages      & Russian -- Native, English -- B2                      \\
+    % YSDA
+    spring 2019, 2020, 2021                                                                                                       \\ {\boldgrey{Yandex DA school}} \\ &
+    {\textsc{Teaching assistant for the course Practical RL}} Provided help and read seminars with hw checkups in HSE and YSDA \\
+\end{tabular}
+%--------------------SKILLS----------------------
+\section*{Generall Skills}
+\begin{tabular}{@{}L!{\VRule}R}
+    Programming    & Python (numpy, scipy), Simulink, MATLAB, C++                     \\
+    Other tools & git, vim, unix, latex, Vector software, Altium Designer, Solidworks, LabView \\
+    Speaking      & Russian -- Native, English -- B2                      \\
 \end{tabular}
 % 
 % 
 %--------------------OTHER----------------------
-\section*{Other}
+\section*{Activities}
 \begin{tabular}{@{}L!{\VRule}R}
-    Recent Activities & organized reading club about robotics and self-driving, \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{FSAE AI judging} \\
-    Other interests   & road bicycle racing, motorsport
+    
+    Formula Student & {\textsc{design judge}} \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{FSAE AI UK} 2020 \\
+                    & {\textsc{chief design judge}} Formula Student Russia 2020 \\
+    motorsport      & {\textsc{Flag Marshal}} 2020 Formula One Sochi Gran Prix , 2020 Russian Circuit Racing Series \\
+                    & {\textsc{Scrutineering, technical control, data analysis}} 2021 Russian Circuit Racing Series , 2021 Russian Hot Hatch Club Championship \\ 
+    sports   & road bicycle racing, boxing \\
+    Other activities & organized reading club about robotics and self-driving
 \end{tabular}
 % 
 %
