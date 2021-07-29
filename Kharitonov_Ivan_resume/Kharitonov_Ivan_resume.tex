@@ -1,0 +1,87 @@
+% IVAN KHARITONOV RESUME Nov 2019
+% DOCUMENT SETUP
+\documentclass[10pt, a4paper]{extarticle}
+\includeonly{
+    parts/01_header.tex
+    }
+\makeatletter
+% FONT SIZE
+\renewcommand\normalsize{\@setfontsize\normalsize{9}{12}}
+\makeatother
+% LINE SPREAD
+\linespread{1.1}
+\usepackage{array, xcolor, lipsum, bibentry}
+% PAGE MARGINS
+\usepackage[left=2cm, right=2cm,t op=2cm, bottom=2cm]{geometry}
+% 
+\usepackage{multicol}
+\usepackage{titling}
+ % DISABLE PAGE NUMBERING
+\pagenumbering{gobble}
+%  DISABLE LINE BREAKING
+\hyphenpenalty = 10000 
+\exhyphenpenalty = 10000
+% NEW COMMANDS
+\definecolor{mygray}{gray}{0.35}
+\newcommand\boldgrey[1]{\textcolor{mygray}{\textbf{#1}}} 
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+% NEW BULLET POINTS
+\renewcommand{\labelitemi}{$\circ$} 
+\renewcommand\labelitemii{$\square$}
+% HYPERLINKS SETUP
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true, 
+urlcolor=blue,  
+urlbordercolor=cyan}
+% DEFINE SPACE AROUND SECTION
+\usepackage{titlesec}
+\titlespacing*{\section} {0pt}{0ex}{0ex} 
+% PHOTO
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{{./images/}}
+\usepackage[leftcaption]{sidecap}
+%
+% 
+%--------------------HEADER (NAME, CONTACTS - EMPTY)----------------------
+\setlength{\droptitle}{-7em}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\title{\bfseries\Huge Ivan Kharitonov}
+\author{}
+\date{}
+% 
+% 
+%--------------------TABLE SETUP----------------------
+\definecolor{lightgray}{gray}{0.65}
+\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}} % LEFT TABLE MARGIN
+\newcolumntype{R}{p{0.8\textwidth}} % RIGHT TABLE MARGIN
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+%  
+%--------------------CONTACTS----------------------
+\begin{document}
+\maketitle
+\vspace{-7.5em}
+% 
+\begin{SCfigure}[1.5][h]
+    \includegraphics[width=0.2\textwidth]{portrait.jpeg}
+    \captionsetup{labelformat=empty}
+    \caption{Moscow \\ 
+    1 Nov 1991 \\ 
+    ipkharitonov@gmail.com \\
+    +7(916)785-71-11 }
+\end{SCfigure}
+% 
+\input{parts/01_header.tex}
+%--------------------EDUCATION----------------------
+\input{parts/02_education.tex}
+%--------------------EXPERIENCE----------------------
+\input{parts/03_professional_experience.tex}
+\input{parts/04_teaching.tex}
+%--------------------SKILLS----------------------
+\input{parts/05_general_skills.tex}
+%--------------------OTHER----------------------
+\input{parts/06_activities.tex}
+% 
+\end{document}
