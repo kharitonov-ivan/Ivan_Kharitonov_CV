@@ -25,19 +25,11 @@ jobs:
           glob_root_file: true
           args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
 
-      - name: Debug
-        run: ls Kharitonov_Ivan_resume/out/
-
       - name: Upload .PDF Artifact
         uses: actions/upload-artifact@v1
         with:
           name: PDF
           path: Kharitonov_Ivan_resume/out/Kharitonov_Ivan_resume.pdf
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: resume.pdf
           
       - uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
