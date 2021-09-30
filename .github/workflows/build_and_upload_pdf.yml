@@ -10,6 +10,10 @@ jobs:
   build_resume:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+        
       - name: Set up Git repository
         uses: actions/checkout@v2
 
@@ -18,7 +22,6 @@ jobs:
         with:
           root_file: Kharitonov_Ivan_resume.tex
           working_directory: Kharitonov_Ivan_resume/
-
           glob_root_file: true
           args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
 
@@ -35,6 +38,7 @@ jobs:
         with:
           name: PDF
           path: resume.pdf
+          
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -45,6 +49,7 @@ jobs:
           release_name: Release ${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
+          
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
