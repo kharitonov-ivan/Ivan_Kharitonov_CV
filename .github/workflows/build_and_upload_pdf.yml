@@ -51,4 +51,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: Kharitonov_Ivan_resume/out/Kharitonov_Ivan_resume.pdf
           asset_name: Kharitonov_Ivan_resume.pdf
-          asset_content_type: pdf
+          asset_content_type: application/pdf
