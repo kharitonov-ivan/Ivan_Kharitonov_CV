@@ -289,3 +289,7 @@ TSWLatexianTemp*
 
 # latex indent
 __latexindent_temp.tex
+
+# pdf
+*/*.pdf
+Kharitonov_Ivan_resume/Kharitonov_Ivan_resume.pdf
