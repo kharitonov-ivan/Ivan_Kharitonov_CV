@@ -54,37 +54,8 @@ urlbordercolor=cyan}
 \usepackage[leftcaption]{sidecap}
 %
 % 
-%--------------------HEADER (NAME, CONTACTS - EMPTY)----------------------
-\setlength{\droptitle}{-8em}
-\usepackage{enumitem}
-\setlist{nolistsep}
-\title{\bfseries\Huge Ivan Kharitonov}
-\author{}
-\date{}
-% 
-% 
-%--------------------TABLE SETUP----------------------
-\definecolor{lightgray}{gray}{0.65}
-\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}} % LEFT TABLE MARGIN
-\newcolumntype{R}{p{0.8\textwidth}} % RIGHT TABLE MARGIN
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-%  
-%--------------------CONTACTS----------------------
-\begin{document}
-\maketitle
-\vspace{-10em}
-% 
-\begin{SCfigure}[1.5][h]
-    \includegraphics[width=0.2\textwidth]{portrait.jpeg}
-    \captionsetup{labelformat=empty}
-    \caption{Moscow, Russia \\ 
-    1 Nov 1991 \\ 
-    ipkharitonov@gmail.com \\
-    \href{https://github.com/neer201}{github.com/neer201} \\
-    \href{https://www.linkedin.com/in/ivan-kharitonov-34650/}{LinkedIn} \\
-    +7(916)785-71-11 }
-\end{SCfigure}
-% 
+
+\input{parts/00_contacts.tex}
 \input{parts/01_header.tex}
 \input{parts/02_education.tex}
 \input{parts/04_teaching.tex}
