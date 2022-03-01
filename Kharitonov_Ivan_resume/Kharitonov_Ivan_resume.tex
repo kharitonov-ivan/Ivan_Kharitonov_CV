@@ -1,25 +1,20 @@
 % DOCUMENT SETUP
 \documentclass[12pt, a4paper]{extarticle}
 \makeatletter
-% FONT SIZE
-\renewcommand\normalsize{\@setfontsize\normalsize{9}{12}}
+\renewcommand\normalsize{\@setfontsize\normalsize{9}{12}} % FONT SIZE
 \makeatother
-% LINE SPREAD
-\linespread{1.35}
+\linespread{1.25} % LINE SPREAD
 \usepackage{array, xcolor, lipsum, bibentry}
-% PAGE MARGINS
-\usepackage[left=1cm, right=1cm,top=1.5cm, bottom=1cm]{geometry}
-% 
+\usepackage[left=1cm, right=1cm,top=1.5cm, bottom=1cm]{geometry} % PAGE MARGINS
 \usepackage{multicol}
 \usepackage{titling}
 \usepackage{tikz}
 \usepackage{enumitem}
- % DISABLE PAGE NUMBERING
-\pagenumbering{gobble}
+\pagenumbering{gobble}  % DISABLE PAGE NUMBERING
 %  DISABLE LINE BREAKING
 \hyphenpenalty = 10000 
 \exhyphenpenalty = 10000
-% NEW COMMANDS
+% 
 \definecolor{mygray}{gray}{0.35}
 \newcommand\boldgrey[1]{\textcolor{mygray}{\textbf{#1}}} 
 \newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
@@ -28,7 +23,7 @@
 \definecolor{lightblue}{RGB}{ 181 212 239}
 \newcommand{\mymk}[1]{%
   \tikz[baseline=(char.base)]\node[anchor=base, draw,rectangle,fill=lightblue, rounded corners, inner sep=3pt,](char){#1} ;}
-
+% 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
@@ -43,13 +38,17 @@ urlcolor=blue,
 urlbordercolor=cyan}
 % DEFINE SPACE AROUND SECTION
 \usepackage{titlesec}
-\titlespacing*{\section} {0pt}{0ex}{0ex} 
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section} {0pt}{0pt}{0pt} 
 % PHOTO
 \usepackage{graphicx}
 \usepackage{caption}
 \graphicspath{{./images/}}
 \usepackage[leftcaption]{sidecap}
 \usepackage{enumitem}
+\newcommand{\ressubheading}[4]{\textbf{#1} \hfill #2\null \\ \textsc{#3} \hfill #4}
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
 % 
 \begin{document}
 \input{parts/contacts.tex}
