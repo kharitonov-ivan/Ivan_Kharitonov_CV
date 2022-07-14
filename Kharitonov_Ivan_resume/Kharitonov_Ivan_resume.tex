@@ -53,6 +53,12 @@ urlbordercolor=cyan}
 %
 \newcommand*{\sectionformat}{\centering}
 %
+%--------------------TABLE SETUP----------------------
+\definecolor{lightgray}{gray}{0.65}
+\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}} % LEFT TABLE MARGIN
+\newcolumntype{R}{p{0.8\textwidth}} % RIGHT TABLE MARGIN
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+% 
 \begin{document}
 \input{parts/contacts.tex}
 \input{parts/about.tex}
