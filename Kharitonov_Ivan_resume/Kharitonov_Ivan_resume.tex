@@ -46,10 +46,15 @@ urlbordercolor=cyan}
 \graphicspath{{./images/}}
 \usepackage[leftcaption]{sidecap}
 \usepackage{enumitem}
-\newcommand{\ressubheading}[4]{\textbf{#1} \hfill #2\null \\ \textsc{#3} \hfill #4}
+
+\newcommand{\placeheadding}[3]{\textbf{#1} \textit{#2} \hfill #3\null}
+\newcommand{\positionheading}[2]{\par\noindent \textsc{#1} \hfill #2}
+\newcommand{\ressubheading}[5]{\placeheadding{#1}{#2}{#3} \positionheading{#4}{#5}}
+% \newcommand{\ressubheading}[5]{\textbf{#1} \textit{#2} \hfill #3\null \\ \textsc{#4} \hfill #5}
+
 \setlength{\parskip}{0cm}
 \setlength{\parindent}{1em}
-\newcommand{\horizontalline}{\par\noindent\rule{\textwidth}{0.4pt}\\}
+\newcommand{\horizontalline}{\par\noindent\\}
 %
 \newcommand*{\sectionformat}{\centering}
 %
