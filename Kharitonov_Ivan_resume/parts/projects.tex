@@ -1,8 +1,24 @@
 \section*{\sectionformat Projects}
-\begin{tabular}{@{}L!{\VRule}R}
-    race telemetry analysis lib & developed car race telemetry logs analysis tool for professional national championship        \\
-    end2end OCR                 & YSDA project - reproduce text detector/recoginizer model, apply several ideas and validate it \\
-    space junk simulator        & YSDA project - simulator of space junk objects based using CUDA                               \\
-    ML competitions             & Deep Hack RL 2017 , Kaspersky Data science hackaton 2017, Flatland                            \\
-    other competitions          & Cup Technical 2015, Business diving 2015,
-\end{tabular}
+\textbf{Object tracking toolbox} (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github}) \hfill 2021-current
+\par
+Developed a object tracking library using random finite sets.
+Using: \mymk{python}, \mymk{numpy}
+\\
+% 
+\textbf{Race telemetry toolbox} \textit{(contract work)} \hfill 2021
+\par
+There are a lot of different cars (90-100) in annual championship, there is a need to provide a balance of power -  bring all competitors to the same conditions with weight handicap settings, tyres, chassis and powertrain settings.
+Developed a service which gather data from all cars and racetracks, calculates metrics and shows visualization that helped to calculate needing setup for each car.
+Using: \mymk{pandas}, \mymk{geopandas}, \mymk{shapely}, \mymk{PyProj}, \mymk{Docker}, \mymk{CI - Github Actions}
+\\
+\textbf{End-to-end optical character recognition (OCR)} (\textit{project at the YSDA} - \href{https://github.com/neer201/end2end_OCR}{github})  \hfill 2019
+\par
+For text recognition from raw image usually there are two stages: detection and recognition. Idea was training both simultanteously and adding additional module which can help recognizer to deal with text alignment.
+Reproduced text detector (EAST)/recoginizer model, appied ideas and validated it on ICDAR dataset.
+Using: \mymk{python}, \mymk{torch}
+% 
+\\
+\textbf{Space junk simulator} (\textit{project at the YSDA} - \href{https://github.com/neer201/space_junk_simulator}{github})   \hfill 2019
+\par
+Developed simulator of dynamics of space junk objects.
+Using: \mymk{CUDA}
