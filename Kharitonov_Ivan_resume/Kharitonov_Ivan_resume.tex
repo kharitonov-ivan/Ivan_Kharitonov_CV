@@ -22,7 +22,7 @@
 \usetikzlibrary{shapes}
 \definecolor{lightblue}{RGB}{ 181 212 239}
 \newcommand{\mymk}[1]{%
-  \tikz[baseline=(char.base)]\node[anchor=base, draw,rectangle,fill=lightblue, rounded corners, inner sep=3pt,](char){#1} ;}
+  \tikz[baseline=0pt]\node[draw,rectangle,fill=lightblue, rounded corners, minimum height=1.6em,inner sep=3pt, outer sep=3pt](char){#1} ;}
 % 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
