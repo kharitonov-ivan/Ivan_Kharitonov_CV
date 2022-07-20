@@ -21,9 +21,13 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{shapes}
 \definecolor{lightblue}{RGB}{ 181 212 239}
-\newcommand{\mymk}[1]{%
-  \tikz[baseline=0pt]\node[draw,rectangle,fill=lightblue, rounded corners, minimum height=1.6em,inner sep=3pt, outer sep=3pt](char){#1} ;}
-% 
+\usepackage{tcolorbox}
+\newtcbox{\mymk}[1][lightblue]{on line, arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+  before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt, boxsep=0pt,left=6pt,
+  right=6pt,top=2pt,bottom=2pt}
+% \newcommand{\mymk}[1]{%
+%   \tikz[baseline=0pt]\node[draw,rectangle,fill=lightblue, rounded corners, minimum height=1.6em,inner sep=3pt, outer sep=3pt](char){#1} ;}
+% % 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
