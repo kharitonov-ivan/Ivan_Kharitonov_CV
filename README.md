@@ -1,3 +1,3 @@
-# Kharitonov_Ivan_CV
+# Ivan_Kharitonov_CV
 
-https://github.com/neer201/Kharitonov_Ivan_CV/releases/download/resume-latest/Ivan_Kharitonov_resume.pdf
+https://github.com/neer201/Ivan_Kharitonov_CV/releases/download/resume-latest/Ivan_Kharitonov_resume.pdf
