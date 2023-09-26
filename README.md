@@ -1,3 +1,9 @@
 # Ivan_Kharitonov_CV
 
-https://github.com/neer201/Ivan_Kharitonov_CV/releases/download/resume-latest/Ivan_Kharitonov_resume.pdf
+For building pdf:
+```bash
+make all
+```
+
+Resume can be downloaded from here:
+https://github.com/kharitonov-ivan/Ivan_Kharitonov_CV/releases/download/resume-latest/Ivan_Kharitonov_resume.pdf
