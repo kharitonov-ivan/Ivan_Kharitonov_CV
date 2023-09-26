@@ -1,64 +1,50 @@
-% DOCUMENT SETUP
 \documentclass[12pt, a4paper]{extarticle}
+
+% Packages
+\usepackage[left=1cm, right=1cm,top=1.5cm, bottom=1cm]{geometry}
+\usepackage{array, xcolor, lipsum, bibentry, multicol, titling, tikz, enumitem, tcolorbox, hyperref, titlesec, graphicx, caption,}
+
+% Font and Layout
+\linespread{1.25}
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
+\pagenumbering{gobble}  % DISABLE PAGE NUMBERING
+
 \makeatletter
 \renewcommand\normalsize{\@setfontsize\normalsize{9}{12}} % FONT SIZE
 \makeatother
-\linespread{1.25} % LINE SPREAD
-\usepackage{array, xcolor, lipsum, bibentry}
-\usepackage[left=1cm, right=1cm,top=1.5cm, bottom=1cm]{geometry} % PAGE MARGINS
-\usepackage{multicol}
-\usepackage{titling}
-\usepackage{tikz}
-\usepackage{enumitem}
-\pagenumbering{gobble}  % DISABLE PAGE NUMBERING
-%  DISABLE LINE BREAKING
+
+% Disable line breaking
 \hyphenpenalty = 10000 
 \exhyphenpenalty = 10000
+
+% Hyberlinks setup
+\hypersetup{colorlinks=true, urlcolor=blue, urlbordercolor=cyan}
 % 
 \definecolor{mygray}{gray}{0.35}
 \newcommand\boldgrey[1]{\textcolor{mygray}{\textbf{#1}}} 
 \usetikzlibrary{arrows}
 \usetikzlibrary{shapes}
-\usepackage{tcolorbox}
 \newcommand{\mymk}[1]{\textbf{#1}}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
-% NEW BULLET POINTS
-\renewcommand{\labelitemi}{$\circ$} 
-\renewcommand\labelitemii{$\square$}
-% HYPERLINKS SETUP
-\usepackage{hyperref}
-\hypersetup{
-colorlinks=true, 
-urlcolor=blue,  
-urlbordercolor=cyan}
 % DEFINE SPACE AROUND SECTION
-\usepackage{titlesec}
-% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
-\titlespacing*{\section} {0pt}{0pt}{0pt} 
-% PHOTO
-\usepackage{graphicx}
-\usepackage{caption}
-\graphicspath{{./images/}}
-\usepackage[leftcaption]{sidecap}
-\usepackage{enumitem}
+\titlespacing*{\section} {0pt}{0pt}{0pt} % \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 
+% Custom Commands
+\renewcommand{\labelitemi}{$\circ$} % bullet point
+\renewcommand{\labelitemii}{$\square$}  % bullet point
 \newcommand{\placeheadding}[3]{\textbf{#1} \textit{#2} \hfill #3\null}
 \newcommand{\positionheading}[2]{\par\noindent \textsc{#1} \hfill #2}
 \newcommand{\ressubheading}[5]{\placeheadding{#1}{#2}{#3} \positionheading{#4}{#5}}
-% \newcommand{\ressubheading}[5]{\textbf{#1} \textit{#2} \hfill #3\null \\ \textsc{#4} \hfill #5}
-
-\setlength{\parskip}{0cm}
-\setlength{\parindent}{1em}
 \newcommand{\horizontalline}{\par\noindent\\}
-%
 \newcommand*{\sectionformat}{\centering}
-%
-%--------------------TABLE SETUP----------------------
+
+% Table setup
 \definecolor{lightgray}{gray}{0.65}
-\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}} % LEFT TABLE MARGIN
-\newcolumntype{R}{p{0.8\textwidth}} % RIGHT TABLE MARGIN
+\newcolumntype{L}{>{\raggedright}p{0.875\textwidth}} % LEFT TABLE MARGIN
+\newcolumntype{R}{p{0.125\textwidth}} % RIGHT TABLE MARGIN
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
 % 
 \begin{document}
@@ -74,13 +60,7 @@ urlbordercolor=cyan}
 \vspace{-9.5em}
 % 
 \par
-ipkharitonov@gmail.com
-\hfill
-+7-916-785-71-11
-\hfill
-\href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn}
-\hfill
-\href{https://github.com/neer201}{GitHub}
+ipkharitonov@gmail.com \hfill +7-916-785-71-11 \hfill \href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn} \hfill \href{https://github.com/neer201}{GitHub}
 \par
 %
 % SUMMARY
@@ -92,7 +72,7 @@ Participates in autosport and cycling races, as competitor. Applying for a Globa
 \section*{\sectionformat Experience}
 % 
 % Sberautotech
-\ressubheading{Sber Automotive Technologies}{(self-driving tech company - \href{https://sberautotech.ru/}{info})}{Moscow}{Research engineer}{Aug 2020 -- Present}
+\ressubheading{Sber Automotive Technologies}{(self-driving tech company - \href{https://sberautotech.ru/}{info})}{Moscow}{Research engineer}{Aug 2020 -- present}
 
 
 \textbf{Motion trajectory prediction} \textit{(Prediction team)}
@@ -209,32 +189,21 @@ Summer school \textbf{Control, Information, Optimization}, Yandex autumn \textbf
 \nolinebreak
 %
 % ACTIVITIES
-\section*{\sectionformat Teaching and Activities}
+\section*{\sectionformat Activities}
 \begin{tabular}{@{}L!{\VRule}R}
-	2019-2023  {\boldgrey{Practical RL}} &
-	{\textsc{Teaching assistant}} Higher School of Economics and Yandex School of Data Analysis.
+	{\textsc{Teaching Assistant}} on Reinforcement Learning course in HSE and Yandex School of Data Analysis        & 2019 - present
 	\\
-	2022-2023 {\boldgrey{MIPT}}
-	                                     & {\textsc{Mentor}} Provide guidance to a student who is working on a bachelor's thesis related to motion prediction.
+	{\textsc{Teaching Assistant}} on Deep Learning in Audio course in Higher School of Economics                    & 2023 - present
 	\\
-	Formula Student \& Sport             &
-	{\textsc{design judge}} \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{FS AI UK} 2020, FS Russia 2020/2021/2022, \href{https://www.formulastudent.de/fsg/}{FS Germany} 2021,
-	{\textsc{Scrutineering F1/F2/F3}}
+	{\textsc{Mentor}} Provide guidance to a student who is working on a bachelor's thesis.                          & 2022 - 2023
 	\\
-	Competitions                         &
-	Deep Hack RL 2017 ,
-	Kaspersky DS hackaton 2017,
-	Flatland ,
-	Cup Technical 2015,
-	Business diving 2015.
+	{\textsc{design judge}} Formula Student  \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{FS AI UK} 2020, FS Russia 2020/2021/2022, \href{https://www.formulastudent.de/fsg/}{FS Germany} 2021,
+	{\textsc{Scrutineering F1/F2/F3}}                                                                               & 2019-2023
+	\\
+	Participated Deep Hack RL 2017, Kaspersky DS hackaton 2017, Flatland, Cup Technical 2015, Business diving 2015. &
 \end{tabular}
-%
-% SKILLS
+
+
 \section*{\sectionformat Skills}
-\begin{tabular}{@{}L!{\VRule}R}
-	Tools             & MlOps, DevOps, CI/CD (github actions, gitlab-CI), ROS2, xpra, docker, DVC, Spark, hydra                                                                                                                            \\
-	Engineering tools & Altium Designer, Solidworks, LabView, Simulink, Vector software (CANape)                                                                                                                                           \\
-	Skills            & Python, C++, MATLAB, PyTorch, ML, DL, Reinforcement Learning, Computer Vision, NLP, GANs, GNN, Signal Processing, Point Clouds, LIDARs, Time Series, Image/Video Processing,  Self-Driving, MCTS, Kalman filtering
-	\\
-\end{tabular}
+Python, C++, MATLAB, MlOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, Multple Object Tracking, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
 \end{document}
