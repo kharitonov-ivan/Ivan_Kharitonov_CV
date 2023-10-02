@@ -6,7 +6,7 @@ pdf: Ivan_Kharitonov_resume.tex
 	xelatex Ivan_Kharitonov_resume.tex 
 	
 format:
-	latexindent --overwrite Ivan_Kharitonov_resume.tex
+	latexindent --overwrite Ivan_Kharitonov_resume.tex resume.cls
 clean:
 	rm -f *.aux *.bbl *.blg *.log *.out *.toc *bak* *.gz 
 

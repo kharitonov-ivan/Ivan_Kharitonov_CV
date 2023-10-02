@@ -1,209 +1,105 @@
-\documentclass[12pt, a4paper]{extarticle}
+\documentclass[]{resume}
 
-% Packages
-\usepackage[left=1cm, right=1cm,top=1.5cm, bottom=1cm]{geometry}
-\usepackage{array, xcolor, lipsum, bibentry, multicol, titling, tikz, enumitem, tcolorbox, hyperref, titlesec, graphicx, caption,}
-
-% Font and Layout
-\linespread{1.25}
-\setlength{\parskip}{0cm}
-\setlength{\parindent}{1em}
-\pagenumbering{gobble}  % DISABLE PAGE NUMBERING
-
-\makeatletter
-\renewcommand\normalsize{\@setfontsize\normalsize{9}{12}} % FONT SIZE
-\makeatother
-
-% Disable line breaking
-\hyphenpenalty = 10000 
-\exhyphenpenalty = 10000
-
-% Hyberlinks setup
-\hypersetup{colorlinks=true, urlcolor=blue, urlbordercolor=cyan}
-% 
-\definecolor{mygray}{gray}{0.35}
-\newcommand\boldgrey[1]{\textcolor{mygray}{\textbf{#1}}} 
-\usetikzlibrary{arrows}
-\usetikzlibrary{shapes}
-\newcommand{\mymk}[1]{\textbf{#1}}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
-
-% DEFINE SPACE AROUND SECTION
-\titlespacing*{\section} {0pt}{0pt}{0pt} % \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
-
-% Custom Commands
-\renewcommand{\labelitemi}{$\circ$} % bullet point
-\renewcommand{\labelitemii}{$\square$}  % bullet point
-\newcommand{\placeheadding}[3]{\textbf{#1} \textit{#2} \hfill #3\null}
-\newcommand{\positionheading}[2]{\par\noindent \textsc{#1} \hfill #2}
-\newcommand{\ressubheading}[5]{\placeheadding{#1}{#2}{#3} \positionheading{#4}{#5}}
-\newcommand{\horizontalline}{\par\noindent\\}
-\newcommand*{\sectionformat}{\centering}
-
-% Table setup
-\definecolor{lightgray}{gray}{0.65}
-\newcolumntype{L}{>{\raggedright}p{0.875\textwidth}} % LEFT TABLE MARGIN
-\newcolumntype{R}{p{0.125\textwidth}} % RIGHT TABLE MARGIN
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-% 
 \begin{document}
-% HEADER
-\setlength{\droptitle}{-10em}
-\setlist{nolistsep}
-\title{\bfseries\Huge Ivan Kharitonov}
-\author{}
-\date{}
-%  
-% CONTACTS
-\maketitle
-\vspace{-9.5em}
-% 
-\par
-ipkharitonov@gmail.com \hfill +7-916-785-71-11 \hfill \href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn} \hfill \href{https://github.com/neer201}{GitHub}
-\par
-%
-% SUMMARY
-Bauman Moscow State Technical University 2014  M.S. Electrical Engineering (RADAR, GNSS systems etc.) + M.S. like specialization in ML at Yandex.\
-Has 8+ years of programming experience, 6+ years Data Science \& Research experience, 4+ years with Automotive Vehicles (perception, LIDARs, motion prediction), 1.5+ years of Team Leadership of Research team (4+ ppl). Experience: Sber Automotive, VimpelCom. Finished 10+ automotive research projects, 5+ ML research projects.\
-Participates in autosport and cycling races, as competitor. Applying for a Global Talent Visa in the UK to expand my opportunities.
-%
-% EXPERIENCE
+
+% Header
+\begin{center}
+	\Huge Ivan Kharitonov \par
+	\normalsize  \textbf{ML/research engineer} \hfill ipkharitonov@gmail.com \hfill +79167857111 \hfill \href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn} \hfill \href{https://github.com/kharitonov-ivan}{GitHub}
+\end{center}
+\vspace{-1em}
+
+% Summary
+\noindent M.S. in Electrical Engineering from Bauman Moscow State Technical University (2014), and an ML specialization from Yandex School of Data Analysis (2019). Accumulated 8+ years in programming, 6+ years in Data Science \& Research, and 4+ years in Autonomous Vehicles (focusing on perception, LIDARs, agents' motion prediction). Led a research team of 4+ for 1.5+ years, completing 10+ automotive and 5+ ML research projects. Actively competes in autosport and cycling races. Applying for a Global Talent Visa in the UK.
+
+% Experience
 \section*{\sectionformat Experience}
-% 
-% Sberautotech
-\ressubheading{Sber Automotive Technologies}{(self-driving tech company - \href{https://sberautotech.ru/}{info})}{Moscow}{Research engineer}{Aug 2020 -- present}
+\position{Research engineer}{Sberautotech self-driving \href{https://sberautotech.ru/}{info}}{Aug 2020-present}
+\project
+{Motion trajectory prediction}
+{Lead a team (5 ppl) in developing an ML-based agent trajectory prediction project pipeline, overseeing testing and code reviews. Organized weekly research paper review seminars, incorporating ideas from these sessions into final models.}
+{Improve metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gather in-house dataset with 50k scenes, analyze and filter data. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.}
+{python, cpp, pytorch, DL, timeseries, transformer, CVAE, GAN, CNN, pointnet}
 
+\project
+{Model based multi-object tracking / Sensor fusion}
+{Research algorithms for multi-object tracking and develop a project pipeline for the task.}
+{Established a baseline for model-based tracking by implementing a state-of-the-art algorithm for multi-object tracking. Also developed a simulator for this task with motion and measurement models, and created test scenarios. Collaborated with a team and shared key concepts related to the task.}
+{Poisson multi Bernoulli mixture, Kalman filter, random finite set, hypothesis tree}
 
-\textbf{Motion trajectory prediction} \textit{(Prediction team)}
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Lead a team (5 ppl) in developing an ML-based agent trajectory prediction project pipeline, overseeing testing and code reviews. Organized weekly research paper review seminars, incorporating ideas from these sessions into final models.
-	\item[] \underline{Results:} Improve metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gather in-house dataset with 50k scenes, analyze and filter data. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.
-	\item[] \underline{Technologies:} \mymk{python, cpp}, \mymk{PyTorch}, \mymk{ML}, \mymk{DL}, \mymk{Time Series}, \mymk{RNN}, \mymk{Transformer}, \mymk{CVAE}, \mymk{GAN}, \mymk{CNN}, \mymk{PointNet}
-\end{itemize}
+\project
+{3D Object detection}
+{Research algorithms for 3D object detection and develop first baseline fot this task.}
+{Established the initial baseline for 3D object detection using point-cloud data. Trained a model that runs in a ROS2 node on a self-driving car, with an average processing time of 80ms per frame, allowing the self-driving software to understand the presence of objects.}
+{python, pytorch, ML, DL, Computer Vision, point cloud, LIDAR, ROS2}
 
-\textbf{Model based multi-object tracking / Sensor fusion} \textit{(Prediction team)}
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Research algorithms for multi-object tracking and develop a project pipeline for the task.
-	\item[] \underline{Results:} Established a baseline for model-based tracking by implementing a state-of-the-art algorithm for multi-object tracking. Also developed a simulator for this task with motion and measurement models, and created test scenarios. Collaborated with a team and shared key concepts related to the task.
-	\item[] \underline{Technologies:} \mymk{python}, \mymk{Poisson multi Bernoulli mixture}, \mymk{Kalman
-			filter}, \mymk{Random finite set}, \mymk{hypothesis tree}
-\end{itemize}
+\par \noindent
+\position{Software engineer}{Contracted work and other}{Nov 2017 - Aug 2020}
+\project
+{Multiple object tracking toolbox (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github})}
+{Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art. This stands as one of the few public implementations.}{}{}
 
-\textbf{3D Object detection} (\textit{Perception team})
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Research algorithms for 3D object detection and develop first baseline fot this task.
-	\item[] \underline{Results:} Established the initial baseline for 3D object detection using point-cloud data. Trained a model that runs in a ROS2 node on a self-driving car, with an average processing time of 80ms per frame, allowing the self-driving software to understand the presence of objects.
-	\item[] \underline{Technologies:} \mymk{python}, \mymk{PyTorch}, \mymk{ML}, \mymk{DL}, \mymk{Computer Vision}, \mymk{Point clouds}, \mymk{LIDARs},  \mymk{ROS2}
-\end{itemize}
-\par .\\
-%
-\textbf{Self-employed projects}  \hfill \textit{Nov 2017 - Aug 2020}
-\\
-\textbf{Multiple object tracking toolbox} (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github}) \hfill 2021-current
+\project
+{Race telemetry toolbox}
+{Created a service for annual racecar championships that enhances competitive fairness by analyzing and visualizing car and track data. It generates essential metrics to guide the calibration of weight, tyre, chassis, and powertrain settings for each vehicle.}
+{}{python, pandas, geopandas, shapely, PyProj, Docker, CI - Github Actions}
 
-\underline{Description:} Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art. This stands as one of the few public implementations.\\
-\textbf{Race telemetry toolbox} \textit{(contract work)} \hfill 2021
-\par
-\underline{Description:} Created a service for annual racecar championships that enhances competitive fairness by analyzing and visualizing car and track data. It generates essential metrics to guide the calibration of weight, tyre, chassis, and powertrain settings for each vehicle.
+\project
+{End-to-end optical character recognition (OCR) (\href{https://github.com/neer201/end2end_OCR}{github})}
+{Working in the 3-ppl team and guided by Yandex researchers (project at the Yandex School of Data Analysis), enhance text recognition from images using the EAST model and a text alignment module. Our innovation involved training the detection and recognition stages simultaneously.}
+{By integrating text detection and recognition into an end-to-end model, we improved efficiency in OCR deep learning models. Evaluation on the ICDAR dataset revealed superior performance, confirming the effectiveness.}
+{python, PyTorch, NLP, Computer Vision, OCR}
 
-\underline{Technologies:} \mymk{python}, \mymk{pandas}, \mymk{geopandas}, \mymk{shapely}, \mymk{PyProj}, \mymk{Docker}, \mymk{CI - Github Actions}
-\\
-\textbf{End-to-end optical character recognition (OCR)} (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/end2end_OCR}{github})  \hfill 2019
-\par
-\underline{Description:} Working in the 3-ppl team and guided by Yandex researchers, enhance text recognition from images using the EAST model and a text alignment module. Our innovation involved training the detection and recognition stages simultaneously.
-
-\underline{Results:} By integrating text detection and recognition into an end-to-end model, we improved efficiency in OCR deep learning models. Evaluation on the ICDAR dataset revealed superior performance, confirming the effectiveness.
-
-\underline{Technologies:} \mymk{python}, \mymk{PyTorch}, \mymk{NLP}, \mymk{Computer Vision}, \mymk{OCR}
-\\
-\textbf{Space junk simulator} (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/space_junk_simulator}{github})   \hfill 2019
-\par
-\underline{Results:} Engineered a parallel-computed simulator, leveraging dynamic principles, to accurately model space debris motion and behavior. This tool forecasts space debris and satellite trajectories, assisting in the detection of potential collisions. Additionally, it is designed to employ RL methods for the optimal control of satellites, specifically to address collision avoidance.
-
-\underline{Technologies:} \mymk{cpp}, \mymk{python}, \mymk{RL}, \mymk{CUDA}, \mymk{Simulation}, \mymk{Runge-Kutta methods}
-% 
-% NAMI
-\pagebreak
-\\
-\placeheadding{Central Scientific Research Automotive Institute - FSUE NAMI}{- \href{https://nami.ru/en/}{info}}{Moscow}
-\positionheading{Software engineer}{Nov 2015 -- Nov 2017}
-
-\textbf{Camera-based object detection} (\href{https://www.engadget.com/2016/08/28/yandex-teams-on-self-driving-shuttle-bus/}{Shuttle project})
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Develop object detection models for the self-driving shuttle bus.
-	\item[] \underline{Results:} Developed dataset, model and metrics. Trained and deployed a model for object detection on the shuttle bus.
-	\item[] \underline{Technologies:}  \mymk{python}, \mymk{CAFFE}, \mymk{Computer Vision}, \mymk{CNN}, \mymk{Object detection}, \mymk{Image/Video Processing}, \mymk{ROS}
-\end{itemize}
-
-\textbf{Transmission control system} (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Develop and deploy control system for automaic transmission.
-	\item[] \underline{Results:} Developed and deployed an advanced hydraulic actuator controller, yielding a 1.2x improvement in quality metrics and up to 40\% reduction in system setting time. Implemented automated calibration procedures for parameters on the testbench, resulting in a significant calibration time improvement of up to 70\%
-	\item[] \underline{Technologies:} \mymk{MATLAB}, \mymk{Simulink}, \mymk{Optimal Control}, \mymk{model reference control}, \mymk{Laplace transform}
-\end{itemize}
-\horizontalline
-% 
-% FSAE
-\ressubheading
-{Bauman Moscow State Technical University}
+\project
+{Space junk simulator (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/space_junk_simulator}{github})}
 {}
-{Moscow}
-{Engineer at FSAE team (international engineering competition) - \href{https://baumanracing.ru/en/}{info}}
-{Mar 2013 -- Aug 2015}
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Develop and assembly hardware and software for a racecar.
-	\item[] \underline{Results:} Developed a high-accuracy localization module leveraging affordable GNSS receivers, resulting in a 10 cm accuracy and a five-fold cost reduction. Designed an F1-inspired steering wheel with an LCD display. This effort culminated in positive judge reviews at a design event and attracted sponsorships for acquiring new equipment, thereby laying a solid foundation.
-	\item[] \underline{Technologies:} \mymk{python}, \mymk{real-time kinematic}, \mymk{QT}, \mymk{ARM}, \mymk{Arduino}, \mymk{Motec}, \mymk{STM32}, \mymk{CAN bus}, \mymk{Linux}
+{Engineered a parallel-computed simulator, leveraging dynamic principles, to accurately model space debris motion and behavior. This tool forecasts space debris and satellite trajectories, assisting in the detection of potential collisions. Additionally, it is designed to employ RL methods for the optimal control of satellites, specifically to address collision avoidance.}
+{cpp, python, RL, CUDA, simulation, Runge-Kutta methods}
 
-\end{itemize}
-\horizontalline
-% \pagebreak
-% 
-% Dominanta Vimpelcom
-\ressubheading
-{PJSC VimpelCom - CRYPTO LLC}
-{(telecom, providing TV for watching on mobile phones - \href{https://www.dvb.org/news/russia-to-launch-dvb-h-services}{info})}
-{Moscow}
-{Engineer at infrastructure department}{May 2009 -- Jul 2013}
-\begin{itemize}
-	\item[] \underline{Responsibilities:} Managed setup, calibration, and continuous monitoring of 35 Moscow-based DVB-H stations, and developed a customer-oriented fault tolerance feature integrated with a data management system.
-	\item[] \underline{Results:}  Successfully improved system reliability and performance, and ensured optimal operation and efficient technical support for the DVB-H stations. This effort resulted in a 10\% increase in the number of subscribers.
-	\item[] \underline{Technologies:}  \mymk{MPEG}, \mymk{Image/Video Processing}, \mymk{Spectral analysis}, \mymk{DVB}, \mymk{Wireshark}, \mymk{Linux}, \mymk{Zabbix}, \mymk{Xen}, \mymk{Heartbeat}
-\end{itemize}
-%
-% EDUCATION
+\position{Research Engineer}{Central Scientific Research Automotive Institute - \href{https://nami.ru/en/}{info}}{Nov 2015 -- Nov 2017}
+\project
+{Camera-based object detection  (\href{https://www.engadget.com/2016/08/28/yandex-teams-on-self-driving-shuttle-bus/}{Shuttle project})}
+{Develop object detection models for the self-driving shuttle bus.}
+{ Developed dataset, model and metrics. Trained and deployed a model for object detection on the shuttle bus.}
+{python, CAFFE, Computer Vision, CNN, Object detection, Image/Video Processing, ROS}
+
+\project
+{Transmission control system (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})}
+{Develop and deploy control system for automaic transmission.}
+{Developed and deployed an advanced hydraulic actuator controller, yielding a 1.2x improvement in quality metrics and up to 40\% reduction in system setting time. Implemented automated calibration procedures for parameters on the testbench, resulting in a significant calibration time improvement of up to 70\%}
+{MATLAB, Simulink, optimal control, model reference control, Laplace transform}
+
+\position{Engineer}{Bauman Moscow State Technical University}{Mar 2013 -- Aug 2015}
+\project
+{Localization module and telemetry module}
+{Develop and assembly hardware and software for a racecar  at FSAE team (international engineering competition) - \href{https://baumanracing.ru/en/}{info}.}
+{Developed a high-accuracy localization module leveraging affordable GNSS receivers, resulting in a 10 cm accuracy and a five-fold cost reduction. Designed an F1-inspired steering wheel with an LCD display. This effort culminated in positive judge reviews at a design event and attracted sponsorships for acquiring new equipment, thereby laying a solid foundation.}
+{python, real-time kinematic, QT, ARM, Arduino, Motec, STM32, CAN bus, Linux}
+
 \section*{\sectionformat Education}
 \textbf{Bauman Moscow State Technical University} - M.S. in Electical Engineering \hfill 2008 -- 2014 \\
-\textit{courseworks: Statistics, Signal Processing, RADAR systems, GNSS systems} \\
-% 
 \textbf{Yandex School of Data Analysis} - Computer Science \hfill 2017 -- 2019 \\
-\textit{courseworks: Deep learning, Reinforcement learning, Bayessian methods, Algorithms and data structures} \\
-% 
 \textbf{Data Mining in Action} course (open ML course at the Moscow Institute of Physics and Technology) \hfill    2016         \\
-% 
-%
-\textbf{Automotive Vehicles workshop at the Formula Student Germany Academy by Waymo} - \href{https://drive.google.com/file/d/1-WxECccxBrRWIvEt9WQeXKTueiF658r7/view?usp=sharing}{certificate}   \hfill  2020       \\
-% 
-Summer school \textbf{Control, Information, Optimization}, Yandex autumn \textbf{school on generative models} \href{https://indico.cern.ch/event/1082512/timetable/#20211123}{info}                  \hfill  2019-2021
-\nolinebreak
-%
-% ACTIVITIES
+\textbf{Automonous Vehicle workshop at FSG by Waymo} - \href{https://drive.google.com/file/d/1-WxECccxBrRWIvEt9WQeXKTueiF658r7/view?usp=sharing}{certificate}   \hfill  2020       \\
+Summer school \textbf{Control, Information, Optimization} \\
+Yandex autumn \textbf{school on generative models} \href{https://indico.cern.ch/event/1082512/timetable/#20211123}{info}                  \hfill  2019-2021
+
 \section*{\sectionformat Activities}
 \begin{tabular}{@{}L!{\VRule}R}
-	{\textsc{Teaching Assistant}} on Reinforcement Learning course in HSE and Yandex School of Data Analysis        & 2019 - present
+	{\textsc{Teaching Assistant}} on Reinforcement Learning course in HSE and YSDA               & 2019 - present
 	\\
-	{\textsc{Teaching Assistant}} on Deep Learning in Audio course in Higher School of Economics                    & 2023 - present
+	{\textsc{Teaching Assistant}} on Deep Learning in Audio course in Higher School of Economics & 2023 - present
 	\\
-	{\textsc{Mentor}} Provide guidance to a student who is working on a bachelor's thesis.                          & 2022 - 2023
+	{\textsc{Mentor}} Provide guidance to a student who is working on a bachelor's thesis.       & 2022 - 2023
 	\\
-	{\textsc{design judge}} Formula Student  \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{FS AI UK} 2020, FS Russia 2020/2021/2022, \href{https://www.formulastudent.de/fsg/}{FS Germany} 2021,
-	{\textsc{Scrutineering F1/F2/F3}}                                                                               & 2019-2023
+	{\textsc{design judge}} [Autonomous Driving] Formula Student  \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{UK} 2020, \href{https://www.formulastudent.de/fsg/}{Germany} 2021,
+	                                                                                             & 2019 - 2023
 	\\
-	Participated Deep Hack RL 2017, Kaspersky DS hackaton 2017, Flatland, Cup Technical 2015, Business diving 2015. &
+	Formula One Grand prix Sochi \textsc{Scrutineering F1/F2/F3}                                 & 2020-2021
+	\\
+	Deep Hack RL 2017, Kaspersky DS hackaton 2017, Flatland                                      & 2015 - present
 \end{tabular}
 
-
 \section*{\sectionformat Skills}
-Python, C++, MATLAB, MlOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, Multple Object Tracking, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
+Python, C++, MATLAB, MlOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, GNSS, RTK, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
 \end{document}
