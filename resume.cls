@@ -34,10 +34,10 @@
 
 \newcommand{\project}[4]{%
 	\noindent
-	\ifstrempty{#1}{}{\textbf{#1}}  % Project name
-	\ifstrempty{#2}{}{\newline \textit{Responsibilities:} #2 }  % Responsibilities
-	\ifstrempty{#3}{}{\newline \textit{Results:} #3 }  % Result
-	\ifstrempty{#4}{}{\newline \textit{Tech:} \textbf{#4}}  % Technologies
+	\ifstrempty{#1}{}{\textbf{#1}}% Project name
+	\ifstrempty{#2}{}{\ifstrempty{#1}{}{\newline}\textit{Responsibilities:} {#2}}% Responsibilities
+	\ifstrempty{#3}{}{\ifstrempty{#1}{\ifstrempty{#2}{}{\newline}}{\newline}\textit{Results:} #3}% Result
+	\ifstrempty{#4}{}{\ifstrempty{#1}{\ifstrempty{#2}{\ifstrempty{#3}{}{\newline}}{\newline}}{\newline}\textit{Tech:} \textbf{#4}}% Technologies
 }
 
 % Table setup

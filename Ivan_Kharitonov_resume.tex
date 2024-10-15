@@ -10,15 +10,22 @@
 \vspace{-1em}
 
 % Summary
-\noindent M.S. in Electrical Engineering with a specialization in Machine Learning. Over 8 years in programming, 6 years in Data Science, and 4 years in Autonomous Vehicles. Led a research team for 1.5 years, completing over 15 projects. Teaching assistant in Reinforcement Learning and Deep Learning in Audio courses. Active in autosport and cycling. Applying for a Global Talent Visa in the UK
+\noindent M.S. in Electrical Engineering with a specialization in Machine Learning. Over 8 years in programming, 6 years in Data Science, and 4 years in Autonomous Vehicles. Led a research team for 2 years, completing over 15 projects. Teaching assistant in Reinforcement Learning and Deep Learning in Audio courses. Active in autosport and cycling.
 
 % Experience
 \section*{\sectionformat Experience}
-\position{Research engineer}{Sberautotech self-driving \href{https://sberautotech.ru/}{info}}{Aug 2020-present}
+\position{Senior research engineer}{Next Step Fusion \href{https://nextfusion.org/}{info}}{May 2023-present}
+\project
+{ML-based plasma control}
+{Research and development of ML-based plasma control systems. Applied reinforcement learning to obtain policies for controlling plasma parameters. Additionally, conducted research on the optimization of plasma states and further device development.}
+{Developed a continuous control RL pipeline to maintain plasma shape. Conducted testbed experiments. Modeled the power supply system and integrated it into the simulation.}
+{Python, RL, black-box optimization, Bayesian methods, surrogate models, uncertainty estimation}
+
+\position{Research engineer}{Sberautotech self-driving \href{https://sberautotech.ru/}{info}}{Aug 2020-May 2023}
 \project
 {Motion trajectory prediction}
-{Lead a team (5 ppl) in developing an ML-based agent trajectory prediction project pipeline, overseeing testing and code reviews. Organized weekly research paper review seminars, incorporating ideas from these sessions into final models.}
-{Improve metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gather in-house dataset with 50k scenes, analyze and filter data. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.}
+{Led a team (5 ppl) in developing an ML-based agent trajectory prediction project pipeline, overseeing testing and code reviews. Organized weekly research paper review seminars, incorporating ideas from these sessions into final models.}
+{Improved metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gathered an in-house dataset with 50k scenes, analyzed and filtered data. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through a multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.}
 {python, cpp, pytorch, DL, transformer, CVAE, GAN, CNN, pointnet}
 
 \project
@@ -37,43 +44,46 @@
 \position{Software engineer}{Contracted work and other}{Nov 2017 - Aug 2020}
 \project
 {Multiple object tracking toolbox (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github})}
-{Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art. This stands as one of the few public implementations.}{}{}
+{}
+{Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art. This stands as one of the few public implementations.}
+{}
 
 \project
 {Race telemetry toolbox}
+{}
 {Created a service for annual racecar championships that enhances competitive fairness by analyzing and visualizing car and track data. It generates essential metrics to guide the calibration of weight, tyre, chassis, and powertrain settings for each vehicle.}
-{}{python, pandas, geopandas, shapely, PyProj, Docker, CI - Github Actions}
+{python, pandas, geopandas, shapely, PyProj, Docker, CI - Github Actions}
 
 \project
-{End-to-end optical character recognition (OCR) (\href{https://github.com/neer201/end2end_OCR}{github})}
-{Working in the 3-ppl team and guided by Yandex researchers (project at the Yandex School of Data Analysis), enhance text recognition from images using the EAST model and a text alignment module. Our innovation involved training the detection and recognition stages simultaneously.}
-{By integrating text detection and recognition into an end-to-end model, we improved efficiency in OCR deep learning models. Evaluation on the ICDAR dataset revealed superior performance, confirming the effectiveness.}
+{End-to-end optical character recognition (OCR) (\href{https://github.com/kharitonov-ivan/end2end_OCR}{github})}
+{}
+{Worked in a 3-person team, guided by Yandex researchers (Yandex School of Data Analysis project), to enhance text recognition using the EAST model and a text alignment module. We innovated by training detection and recognition simultaneously, improved OCR model efficiency. Our model outperformed others on the ICDAR dataset.}
 {python, PyTorch, NLP, Computer Vision, OCR}
 
 \project
 {Space junk simulator (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/space_junk_simulator}{github})}
 {}
-{Engineered a parallel-computed simulator, leveraging dynamic principles, to accurately model space debris motion and behavior. This tool forecasts space debris and satellite trajectories, assisting in the detection of potential collisions. Additionally, it is designed to employ RL methods for the optimal control of satellites, specifically to address collision avoidance.}
+{Engineered a parallel-computed simulator to model space debris motion and behavior using dynamic principles. Forecasted space debris and satellite trajectories for collision detection. Integrated RL methods for optimal satellite control and collision avoidance.}
 {cpp, python, RL, CUDA, simulation, Runge-Kutta methods}
 
 \position{Research Engineer}{Central Scientific Research Automotive Institute - \href{https://nami.ru/en/}{info}}{Nov 2015 -- Nov 2017}
 \project
 {Camera-based object detection  (\href{https://www.engadget.com/2016/08/28/yandex-teams-on-self-driving-shuttle-bus/}{Shuttle project})}
-{Develop object detection models for the self-driving shuttle bus.}
-{ Developed dataset, model and metrics. Trained and deployed a model for object detection on the shuttle bus.}
+{}
+{Developed object detection models for a self-driving shuttle bus. Built dataset, designed metrics, trained, and deployed the model on the shuttle.}
 {python, CAFFE, Computer Vision, CNN, Object detection, Image/Video Processing, ROS}
 
 \project
-{Transmission control system (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})}
-{Develop and deploy control system for automaic transmission.}
+{Automatic transmission control system (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})}
+{}
 {Developed and deployed an advanced hydraulic actuator controller, yielding a 1.2x improvement in quality metrics and up to 40\% reduction in system setting time. Implemented automated calibration procedures for parameters on the testbench, resulting in a significant calibration time improvement of up to 70\%}
 {MATLAB, Simulink, optimal control, model reference control, Laplace transform}
 
 \position{Engineer}{Bauman Moscow State Technical University}{Mar 2013 -- Aug 2015}
 \project
-{Localization module and telemetry module}
-{Develop and assembly hardware and software for a racecar  at FSAE team (international engineering competition) - \href{https://baumanracing.ru/en/}{info}.}
-{Developed a high-accuracy localization module leveraging affordable GNSS receivers, resulting in a 10 cm accuracy and a five-fold cost reduction. Designed an F1-inspired steering wheel with an LCD display. This effort culminated in positive judge reviews at a design event and attracted sponsorships for acquiring new equipment, thereby laying a solid foundation.}
+{}
+{}
+{Developed hardware and software for an FSAE racecar (\href{https://baumanracing.ru/en/}{info}), including a high-accuracy localization module with 10 cm precision, reducing costs by 5x. Designed an F1-inspired steering wheel with an LCD display, earning positive judge reviews and securing sponsorships for new equipment.}
 {python, real-time kinematic, QT, ARM, Arduino, Motec, STM32, CAN bus, Linux}
 
 \section*{\sectionformat Education}
@@ -81,8 +91,8 @@
 \textbf{Yandex School of Data Analysis} - Computer Science \hfill 2017 -- 2019 \\
 \textbf{Data Mining in Action} course (open ML course at the Moscow Institute of Physics and Technology) \hfill    2016         \\
 \textbf{Automonous Vehicle workshop at FSG by Waymo} - \href{https://drive.google.com/file/d/1-WxECccxBrRWIvEt9WQeXKTueiF658r7/view?usp=sharing}{certificate}   \hfill  2020       \\
-Summer school \textbf{Control, Information, Optimization} \\
-Yandex autumn \textbf{school on generative models} \href{https://indico.cern.ch/event/1082512/timetable/#20211123}{info}                  \hfill  2019-2021
+School \textbf{Control, Information, Optimization}
+Yandex \textbf{school on generative models} \href{https://indico.cern.ch/event/1082512/timetable/#20211123}{info}                  \hfill  2019-2021
 
 \section*{\sectionformat Activities}
 \begin{tabular}{@{}L!{\VRule}R}
@@ -101,5 +111,5 @@ Yandex autumn \textbf{school on generative models} \href{https://indico.cern.ch/
 \end{tabular}
 
 \section*{\sectionformat Skills}
-Python, C++, MATLAB, MlOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, GNSS, RTK, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
+Python, C++, MATLAB, MLOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, GNSS, RTK, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
 \end{document}
