@@ -4,34 +4,46 @@
 
 % Header
 \begin{center}
-	\Huge Ivan Kharitonov \par
-	\normalsize  \textbf{ML/research engineer} \hfill ipkharitonov@gmail.com \hfill +995599008123 \hfill \href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn} \hfill \href{https://github.com/kharitonov-ivan}{GitHub}
+	\textcolor{navy}{\Huge \textbf{Ivan Kharitonov}} \par\vspace{0.2cm}
+	\normalsize \textbf{ML/Research Engineer} \hfill
+	ipkharitonov@gmail.com \hfill
+	+995 599 008 123 \hfill
+	\href{https://www.linkedin.com/in/ivan-kharitonov-main/}{LinkedIn} \hfill
+	\href{https://github.com/kharitonov-ivan}{GitHub}
 \end{center}
-\vspace{-1em}
+\vspace{-0.5em}
 
 % Summary
-\noindent M.S. in Electrical Engineering with a specialization in Machine Learning. 10 years of experience in software engineering, 8 years in Machine Learning, and 4 years in Autonomous Vehicles. Led a research team for 2 years, delivering a deep learning-based motion prediction model to a production fleet. Contributing to fusion energy research using RL and generative models, with a recent publication on plasma control through deep reinforcement learning. Previous experience includes generative NLP projects for text recognition and processing. Served as a Teaching Assistant for Reinforcement Learning courses. Authorized to work in the UK under a Global Talent visa.
+\begin{quote}
+	\noindent M.S. in Electrical Engineering with a specialization in Machine Learning. 10 years of experience in software engineering, 8 years in Machine Learning, and 4 years in Autonomous Vehicles. Led a research team for 2 years, delivering a deep learning-based motion prediction model to a production fleet. Contributing to fusion energy research using RL and generative models, with a recent publication on plasma control through deep reinforcement learning. Previous experience includes generative NLP projects for text recognition and processing. Served as a Teaching Assistant for Reinforcement Learning courses. Authorized to work in the UK under a Global Talent visa.
+\end{quote}
 
 % Experience
 \section*{\sectionformat Experience}
 \position{Senior research engineer}{Next Step Fusion \href{https://nextfusion.org/}{info}}{May 2023-present}
 \project
-{ML-based plasma control}
-{Research and development of ML-based plasma control systems. Applied reinforcement learning to obtain policies for controlling plasma parameters. Additionally, conducted research on the optimization of plasma states and further device development.}
-{Developed a continuous control RL pipeline to maintain plasma shape. Conducted testbed experiments. Modeled the power supply system and integrated it into the simulation.}
-{Python, RL, black-box optimization, Bayesian methods, surrogate models, uncertainty estimation}
+{RL-based plasma shape control}
+{Research and development of ML-based plasma control systems. Applied reinforcement learning to obtain policies for controlling plasma parameters. Designed simulation environments for policy training and evaluation. Collaborated with physics teams to ensure model alignment with physical principles. Developed a continuous control RL pipeline to maintain plasma shape. Conducted testbed experiments to validate simulation results.}
+{Successfully tested control system on the DIII-D tokamak, demonstrating real-world applicability of ML approaches in fusion reactors. Results were published in a peer-reviewed scientific paper.}
+{Python, RL, PyTorch, ray/rllib, PPO, SAC, TD3}
+
+\project
+{Multi-objective optimization of plasma states}
+{Conducted research on plasma state optimization using multi-objective Bayesian optimization approaches. Explored optimization in latent space to improve search efficiency. Developed active learning methods to maximize information gain from computationally expensive simulations. Created a framework for efficient exploration of plasma parameter space.}
+{}
+{Bayesian optimization, Gaussian processes, active learning, multi-objective optimization, surrogate models, latent space representations, uncertainty quantification}
 
 \position{Research engineer}{Sberautotech self-driving \href{https://sberautotech.ru/}{info}}{Aug 2020-May 2023}
 \project
-{Motion trajectory prediction}
+{Motion trajectory prediction (DL)}
 {Led a team (5 ppl) in developing an ML-based agent trajectory prediction project pipeline, overseeing testing and code reviews. Organized weekly research paper review seminars, incorporating ideas from these sessions into final models.}
-{Improved metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gathered an in-house dataset with 50k scenes, analyzed and filtered data. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through a multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.}
+{Improved metrics for trajectory predictions by 33\% in average, and up to 72\% in special cases. Gathered an in-house dataset with 50k scenes. Developed DL models for predicting agent trajectories by incorporating HD maps and addressing uncertainty through a multi-modal distribution. Deployed model in ROS2 node on self-driving car with average inference time 64ms per frame.}
 {python, cpp, pytorch, DL, transformer, CVAE, GAN, CNN, pointnet}
 
 \project
 {Model based multi-object tracking / Sensor fusion}
 {Research algorithms for multi-object tracking and develop a project pipeline for the task.}
-{Established a baseline for model-based tracking by implementing a state-of-the-art algorithm for multi-object tracking. Also developed a simulator for this task with motion and measurement models, and created test scenarios. Collaborated with a team and shared key concepts related to the task.}
+{Established a baseline for model-based tracking by implementing a state-of-the-art algorithm for multi-object tracking. Also developed a simulator for this task with motion and measurement models.}
 {Poisson multi Bernoulli mixture, Kalman filter, random finite set, hypothesis tree}
 
 \project
@@ -43,28 +55,23 @@
 \par \noindent
 \position{Software engineer}{Contracted work and other}{Nov 2017 - Aug 2020}
 \project
-{Multiple object tracking toolbox (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github})}
+{Multiple object tracking toolbox (> 200 stars) (\href{https://github.com/neer201/Multi-Object-Tracking-for-Automotive-Systems-in-python}{github})}
 {}
-{Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art. This stands as one of the few public implementations.}
+{Created an open-source Python library for multiple object tracking, implementing the Poisson Multi-Bernoulli Mixture Filter, that is state of the art.}
 {}
 
-\project
-{Race telemetry toolbox}
-{}
-{Created a service for annual racecar championships that enhances competitive fairness by analyzing and visualizing car and track data. It generates essential metrics to guide the calibration of weight, tyre, chassis, and powertrain settings for each vehicle.}
-{python, pandas, geopandas, shapely, PyProj, Docker, CI - Github Actions}
 
 \project
 {End-to-end optical character recognition (OCR) (\href{https://github.com/kharitonov-ivan/end2end_OCR}{github})}
 {}
-{Worked in a 3-person team, guided by Yandex researchers (Yandex School of Data Analysis project), to enhance text recognition using the EAST model and a text alignment module. We innovated by training detection and recognition simultaneously, improved OCR model efficiency. Our model outperformed others on the ICDAR dataset.}
+{Worked in a 3-person team, guided by Yandex researchers (Yandex School of Data Analysis project), to enhance text recognition using the EAST model and a text alignment module. We innovated by training detection and recognition simultaneously, improved OCR model efficiency.}
 {python, PyTorch, NLP, Computer Vision, OCR}
 
 \project
-{Space junk simulator (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/space_junk_simulator}{github})}
+{Space junk simulator for RL (\textit{project at the Yandex School of Data Analysis} - \href{https://github.com/neer201/space_junk_simulator}{github})}
 {}
-{Engineered a parallel-computed simulator to model space debris motion and behavior using dynamic principles. Forecasted space debris and satellite trajectories for collision detection. Integrated RL methods for optimal satellite control and collision avoidance.}
-{cpp, python, RL, CUDA, simulation, Runge-Kutta methods}
+{Developed a high-performance simulation environment for training reinforcement learning agents in space debris scenarios. Created a parallel-computed physics engine to accurately model orbital dynamics and debris behavior. Implemented reward functions and state representations enabling RL agents to learn optimal satellite control policies for collision avoidance in complex space environments.}
+{cpp, python, RL, CUDA, simulation, Runge-Kutta methods, environment design}
 
 \position{Research Engineer}{Central Scientific Research Automotive Institute - \href{https://nami.ru/en/}{info}}{Nov 2015 -- Nov 2017}
 \project
@@ -73,46 +80,32 @@
 {Developed object detection models for a self-driving shuttle bus. Built dataset, designed metrics, trained, and deployed the model on the shuttle.}
 {python, CAFFE, Computer Vision, CNN, Object detection, Image/Video Processing, ROS}
 
-\project
-{Automatic transmission control system (\href{https://en.wikipedia.org/wiki/Aurus_Senat}{Aurus project})}
-{}
-{Developed and deployed an advanced hydraulic actuator controller, yielding a 1.2x improvement in quality metrics and up to 40\% reduction in system setting time. Implemented automated calibration procedures for parameters on the testbench, resulting in a significant calibration time improvement of up to 70\%}
-{MATLAB, Simulink, optimal control, model reference control, Laplace transform}
-
-\position{Engineer}{Bauman Moscow State Technical University}{Mar 2013 -- Aug 2015}
-\project
-{}
-{}
-{Developed hardware and software for an FSAE racecar (\href{https://baumanracing.ru/en/}{info}), including a high-accuracy localization module with 10 cm precision, reducing costs by 5x. Designed an F1-inspired steering wheel with an LCD display, earning positive judge reviews and securing sponsorships for new equipment.}
-{python, real-time kinematic, QT, ARM, Arduino, Motec, STM32, CAN bus, Linux}
-
 \section*{\sectionformat Education}
-\textbf{Bauman Moscow State Technical University} - M.S. in Electical Engineering \hfill 2008 -- 2014 \\
-\textbf{Yandex School of Data Analysis} - Computer Science \hfill 2017 -- 2019 \\
-\textbf{Data Mining in Action} course (open ML course at the Moscow Institute of Physics and Technology) \hfill    2016         \\
-\textbf{Automonous Vehicle workshop at FSG by Waymo} - \href{https://drive.google.com/file/d/1-WxECccxBrRWIvEt9WQeXKTueiF658r7/view?usp=sharing}{certificate}   \hfill  2020       \\
-School \textbf{Control, Information, Optimization}
-Yandex \textbf{school on generative models} \href{https://indico.cern.ch/event/1082512/timetable/#20211123}{info}                  \hfill  2019-2021
+\textbf{Bauman Moscow State Technical University} - M.S. in Electrical Engineering \hfill 2008 -- 2014 \\[0.05cm]
+\textbf{Yandex School of Data Analysis} - Computer Science \hfill 2017 -- 2019 \\[0.05cm]
+\textbf{Autonomous Vehicle Workshop at FSG by Waymo} - \href{https://drive.google.com/file/d/1-WxECccxBrRWIvEt9WQeXKTueiF658r7/view?usp=sharing}{certificate} \hfill 2020 \\[0.05cm]
 
 \section*{\sectionformat Activities}
 \begin{tabular}{@{}L!{\VRule}R}
-	{\textsc{Teaching Assistant}} on Reinforcement Learning course in HSE and YSDA               & 2019 - present
-	\\
-	{\textsc{Teaching Assistant}} on Deep Learning in Audio course in Higher School of Economics & 2023 - present
-	\\
-	{\textsc{Mentor}} Provide guidance to a student who is working on a bachelor's thesis.       & 2022 - 2023
-	\\
-	{\textsc{design judge}} [Autonomous Driving] Formula Student  \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{UK} 2020, \href{https://www.formulastudent.de/fsg/}{Germany} 2021,
-	                                                                                             & 2019 - 2023
-	\\
-	Formula One Grand prix Sochi \textsc{Scrutineering F1/F2/F3}                                 & 2020-2021
-	\\
-	Deep Hack RL 2017, Kaspersky DS hackaton 2017, Flatland                                      & 2015 - present
+	{\textbf{\textsc{Teaching Assistant}}} Reinforcement Learning course in HSE and YSDA                                                                                                                               & 2019 - present \\
+	{\textbf{\textsc{Teaching Assistant}}} Deep Learning in Audio course in HSE                                                                                                                                        & 2023 - 2024    \\
+	{\textbf{\textsc{Mentor}}} Bachelor's thesis supervision                                                                                                                                                           & 2022 - 2023    \\
+	{\textbf{\textsc{Design Judge}}} Formula Student [Autonomous Driving]     \href{https://www.imeche.org/events/formula-student/team-information/fs-ai}{UK}       \href{https://www.formulastudent.de/fsg/}{Germany} & 2019 - 2023    \\
 \end{tabular}
 
 \section*{\sectionformat Publications}
-\noindent Sorokin D.I., Granovskiy A.A., \textbf{Kharitonov I.}, Stokolesov M., Prokofyev I., Adishchev E., Subbotin G., Nurgaliev M. \textit{Magnetic control of tokamak plasmas through deep reinforcement learning with privileged information}. AI4X 2025 Int. Conference, 2025.
+\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=0pt, label={}]
+	\item Sorokin D.I., Granovskiy A.A., \textbf{Kharitonov I.}, Stokolesov M., Prokofyev I., Adishchev E., Subbotin G., Nurgaliev M. \textit{Magnetic control of tokamak plasmas through deep reinforcement learning with privileged information}. AI4X 2025 Int. Conference, 2025.
+	\item Stokolesov, M. S., Nurgaliev, M. R., \textbf{Kharitonov, I. P.}, Adishchev, E. V., Sorokin, D. I., Clark, R., Orlov, D. M. (2025). Reconstructing the Plasma Boundary with a Reduced Set of Diagnostics. arXiv preprint arXiv:2505.10709.
+\end{itemize}
 
 \section*{\sectionformat Skills}
-Python, C++, MATLAB, MLOps [DVC, Spark, hydra], DevOps [docker, CI/CD - github actions/gitlab-CI, xpra], Robotics [ROS2, LIDAR, Self-Driving], PyTorch, ML, DL, NLP, GANs, GNN, Signal Processing, Point Clouds, Time Series, Image/Video Processing,  MCTS, Kalman filtering, GNSS, RTK, Object detection, Probabilistic modelling, Control, Linear/non-Linear control, Engineering tools [Altium Designer, Solidworks, LabView, Simulink,  Vector software (CANape)], Reinforcement Learning, Computer Vision
+\begin{itemize}[leftmargin=*, itemsep=-2pt, parsep=0pt, label={}]
+	\item \textbf{Programming:} Python, C++, MATLAB
+	\item \textbf{ML/AI:} PyTorch, ML, DL, NLP, GANs, MCTS, GNN, Reinforcement Learning, Computer Vision
+	\item \textbf{MLOps/DevOps:} DVC, Spark, Hydra, Docker, CI/CD (Github Actions, Gitlab-CI), Xpra
+	\item \textbf{Robotics:} ROS2, LIDAR, Self-Driving, GNSS, RTK
+	\item \textbf{Signal Processing:} Point Clouds, Time Series, Image/Video Processing, Kalman Filtering
+	\item \textbf{Control:} Linear/Non-Linear Control, Probabilistic Modelling
+\end{itemize}
 \end{document}
